@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ItemList from "./ItemList";
-import { produce, pantryItems } from "./storeItems";
+import ItemList from "./itemList";
+import { produce, pantryItems } from "./storedItems";
 
 export default function GroceryCart() {
   // declare and initialize state 
@@ -20,7 +20,7 @@ const removeItem = (targetIndex) => {
 };
 
   return (
-    <div>
+    <div className="groceryCart">
       <h1>Grocery Cart</h1>
       <ul>
         {cart.map((item, index) => (
