@@ -12,7 +12,11 @@ export default function GroceryCart() {
 };
 
 const removeItem = (targetIndex) => {
-
+    setCart(
+        (prev) => {
+            return (prev.filter((item, index) => index !== targetIndex))
+        }
+    )
 };
 
   return (
